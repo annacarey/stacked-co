@@ -2,12 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import Welcome from './Welcome';
 import Navbar from './Navbar';
+import Tagline from './Tagline';
 
 const Container: React.FC = () => {
   return (
     <Wrapper>
       <Navbar />
       <Welcome />
+      <Tagline />
     </Wrapper>
   );
 };
