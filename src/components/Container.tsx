@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Welcome from './Welcome';
 import Navbar from './Navbar';
 import Tagline from './Tagline';
+import Footer from './Footer';
 
 const Container: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const Container: React.FC = () => {
       <Navbar />
       <Welcome />
       <Tagline />
+      <Footer />
     </Wrapper>
   );
 };

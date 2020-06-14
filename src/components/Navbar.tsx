@@ -20,7 +20,7 @@ export default Container;
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 10vh;
+  height: 5vh;
   display: flex;
 `;
 
