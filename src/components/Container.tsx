@@ -4,6 +4,8 @@ import Welcome from './Welcome';
 import Navbar from './Navbar';
 import Tagline from './Tagline';
 import Footer from './Footer';
+import Icons from './Icons';
+import Services from './Services';
 
 const Container: React.FC = () => {
   return (
@@ -11,6 +13,8 @@ const Container: React.FC = () => {
       <Navbar />
       <Welcome />
       <Tagline />
+      <Icons />
+      <Services />
       <Footer />
     </Wrapper>
   );
