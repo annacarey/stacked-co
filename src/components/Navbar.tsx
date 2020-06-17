@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-// import { NavLink } from 'react-router-dom';
 
 const Container: React.FC = () => {
   return (
@@ -9,8 +8,8 @@ const Container: React.FC = () => {
         <Logo> </Logo>
       </LeftLinks>
       <RightLinks>
-        <Button type="button"> Services </Button>
-        <Button type="button"> Contact </Button>
+        <A href="#services"> Services </A>
+        <A href="mailto:anna@annajcarey.com"> Contact </A>
       </RightLinks>
     </Wrapper>
   );
@@ -20,8 +19,8 @@ export default Container;
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 10%;
-  min-height: 10vw;
+  height: 50px;
+  flex-shrink: 0;
   display: flex;
 `;
 
@@ -30,6 +29,7 @@ const RightLinks = styled.div`
   margin-right: auto;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   padding-right: 10%;
 `;
 
@@ -46,24 +46,10 @@ const Logo = styled.div`
   background-color: #808080;
 `;
 
-const Button = styled.button`
-  background: none;
-  margin: 0;
-  padding: 0;
-  border: none;
+const A = styled.a`
   cursor: pointer;
   padding-left: 20px;
+  color: #20545e;
+  text-decoration: none;
+  font-size: 14px;
 `;
-
-// const InternalLink = styled(NavLink)`
-//   color: black;
-//   padding: 0px;
-//   text-decoration: none;
-//   padding-right: 20px;
-//   &:visited {
-//     color: black;
-//   }
-//   &:hover {
-//     color: #322c37;
-//   }
-// `;

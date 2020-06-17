@@ -11,11 +11,13 @@ const Container: React.FC = () => {
   return (
     <Wrapper>
       <Navbar />
-      <Welcome />
-      <Tagline />
-      <Icons />
-      <Services />
-      <Footer />
+      <Body>
+        <Welcome />
+        <Tagline />
+        <Icons />
+        <Services />
+        <Footer />
+      </Body>
     </Wrapper>
   );
 };
@@ -29,4 +31,14 @@ const Wrapper = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  flex-wrap: nowrap;
+`;
+
+const Body = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: auto;
+  height: 90%;
 `;

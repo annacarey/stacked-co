@@ -8,36 +8,45 @@ const Services: React.FC = () => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper id="services">
       <Headline>Our Services</Headline>
-      <CardWrapper>
-        <Card
-          paragraph="some other words"
-          title="Engagement & Retention Audit"
-        />
-        <Card paragraph="some other words" title="Launch Maximization Team" />
-        <Card
-          paragraph="some other words"
-          title="Marketing Automation Launchpad"
-        />
-        <Card paragraph="some other words" title="Growth Strategy Consulting" />
-      </CardWrapper>
-      <BottomWrapper>
-        <BottomContent>
-          <LeftWrapper>
-            <H>Systematically increase ROAS and LTV</H>
-            <P>
-              We design and implement retention and conversion strategies that
-              enable efficient marketing teams to generate and nurture millions
-              of perosnal customer relationships.
-            </P>
-            <Button onClick={handleClick}>Contact Us</Button>
-          </LeftWrapper>
-          <RightWrapper>
-            <ImagePlaceholder />
-          </RightWrapper>
-        </BottomContent>
-      </BottomWrapper>
+      <MainWrapper>
+        <CardWrapper>
+          <LeftCol>
+          <Card
+            paragraph="some other words"
+            title="Engagement & Retention Audit"
+          />
+          <Card paragraph="some other words" title="Launch Maximization Team" />
+          </LeftCol>
+          <RightCol>
+          <Card
+            paragraph="some other words"
+            title="Marketing Automation Launchpad"
+          />
+          <Card
+            paragraph="some other words"
+            title="Growth Strategy Consulting"
+          />
+          </RightCol>
+        </CardWrapper>
+        <BottomWrapper>
+          <BottomContent>
+            <LeftWrapper>
+              <H>Systematically increase ROAS and LTV</H>
+              <P>
+                We design and implement retention and conversion strategies that
+                enable efficient marketing teams to generate and nurture
+                millions of perosnal customer relationships.
+              </P>
+              <Button onClick={handleClick}>Contact Us</Button>
+            </LeftWrapper>
+            <RightWrapper>
+              <ImagePlaceholder />
+            </RightWrapper>
+          </BottomContent>
+        </BottomWrapper>
+      </MainWrapper>
     </Wrapper>
   );
 };
@@ -49,19 +58,56 @@ const Wrapper = styled.div`
   height: 80%;
   min-height: 80vw;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
+`;
+
+const MainWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
 `;
 
 const CardWrapper = styled.div`
   display: flex;
   justify-content: space-around;
+  margin-left: 20px;
+  margin-right: 20px;
+  @media (max-width: 620px) {
+    flex-wrap: wrap;
+  }
+  @media (max-width: 420px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const LeftCol = styled.div`
+  display: flex;
+  @media (max-width: 420px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const RightCol = styled.div`
+  display: flex;
+  @media (max-width: 420px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const BottomContent = styled.div`
   width: 560px;
   display: flex;
+  @media (max-width: 620px) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const LeftWrapper = styled.div`
@@ -108,6 +154,9 @@ const ImagePlaceholder = styled.div`
   width: 200px;
   height: 100px;
   background-color: grey;
+  @media (max-width: 620px) {
+    margin-top: 20px;
+  }
 `;
 
 const Button = styled.button`
@@ -118,4 +167,6 @@ const Button = styled.button`
   height: 30px;
   align-self: center;
   margin-top: 20px;
+  cursor: pointer;
+  outline: none;
 `;

@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         </LogoContainer>
       </LeftLinks>
       <RightLinks>
-        <div>hello@stacked.co</div>
+        <A href="mailto:anna@annjcarey.com">hello@stacked.co</A>
       </RightLinks>
     </Wrapper>
   );
@@ -21,7 +21,7 @@ export default Footer;
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 20%;
+  height: 70px;
   min-height: 10vw;
   display: flex;
   align-items: center;
@@ -65,4 +65,9 @@ const Logo = styled.div`
   width: 20px;
   height: 20px;
   background-color: #808080;
+`;
+
+const A = styled.a`
+  text-decoration: none;
+  color: white;
 `;

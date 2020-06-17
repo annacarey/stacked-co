@@ -9,8 +9,8 @@ const Welcome: React.FC = () => {
     <Wrapper>
       <TopDiv> </TopDiv>
       <Header>
-        <h1>Stacked Co.</h1>
-        <P>Technical growth marketers deployed</P>
+        <H1>Stacked Co.</H1>
+        <H2>Technical growth marketers deployed</H2>
         <Button onClick={handleClick}>Contact Us</Button>
       </Header>
       <LogoContainer>
@@ -32,8 +32,7 @@ export default Welcome;
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 60%;
-  min-height: 60vw;
+  height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,8 +55,19 @@ const Header = styled.div`
   margin: 0px;
 `;
 
+const H1 = styled.h1`
+  margin: 0px;
+  font-size: 60px;
+`;
+
+const H2 = styled.p`
+  margin: 0px;
+  font-size: 20px;
+`;
+
 const P = styled.p`
   margin: 0px;
+  font-size: 12px;
 `;
 
 const Button = styled.button`
@@ -69,6 +79,7 @@ const Button = styled.button`
   align-self: center;
   margin-top: 20px;
   cursor: pointer;
+  outline: none;
 `;
 
 const LogoContainer = styled.div`
@@ -77,7 +88,7 @@ const LogoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
   flex-grow: 1;
   color: white;
 `;

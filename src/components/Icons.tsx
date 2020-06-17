@@ -45,6 +45,7 @@ const Wrapper = styled.div`
 const IconWrapper = styled.div`
   display: flex;
   align-items: center;
+  flex: 1;
   justify-content: space-evenly;
 `;
 
