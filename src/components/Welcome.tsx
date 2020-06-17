@@ -9,7 +9,7 @@ const Welcome: React.FC = () => {
     <Wrapper>
       <TopDiv> </TopDiv>
       <Header>
-        <H1>Stacked Co.</H1>
+        <H1>Stacked Co. </H1>
         <H2>Technical growth marketers deployed</H2>
         <Button onClick={handleClick}>Contact Us</Button>
       </Header>
