@@ -63,6 +63,8 @@ const H1 = styled.h1`
 const H2 = styled.p`
   margin: 0px;
   font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 `;
 
 const P = styled.p`

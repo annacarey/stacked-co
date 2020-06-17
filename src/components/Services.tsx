@@ -13,21 +13,28 @@ const Services: React.FC = () => {
       <MainWrapper>
         <CardWrapper>
           <LeftCol>
-          <Card
-            paragraph="some other words"
-            title="Engagement & Retention Audit"
-          />
-          <Card paragraph="some other words" title="Launch Maximization Team" />
+            <Card
+              paragraph="We identify gaps in your retention and CRO capabilities and build a roadmap to generate value immediately & systematically increase revenue into the future."
+              frontTitle="Engagement & Retention Audit"
+              backTitle="An expert playbook built just for you"
+            />
+            <Card
+              paragraph="We rapidly implement CRO and retention tactics that maximize and amplify the value of earned traffic during a launch or significant PR event."
+              frontTitle="Launch Maximization Team"
+              backTitle="Get the most out of your launch"
+            />
           </LeftCol>
           <RightCol>
-          <Card
-            paragraph="some other words"
-            title="Marketing Automation Launchpad"
-          />
-          <Card
-            paragraph="some other words"
-            title="Growth Strategy Consulting"
-          />
+            <Card
+              paragraph="We build and prove all the systems for you and train your team on how to continually optimize them long after we’re gone."
+              backTitle="We strategize, implement & execute"
+              frontTitle="Marketing Automation Launchpad"
+            />
+            <Card
+              paragraph="We’re there to work through growth strategy, vet key hires, and knockdown barriers when you need results fast. A trusted resource for your leadership team."
+              backTitle="A senior growth partner in your corner"
+              frontTitle="Growth Strategy Consulting"
+            />
           </RightCol>
         </CardWrapper>
         <BottomWrapper>
@@ -74,10 +81,15 @@ const CardWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   margin-left: 20px;
+  flex-basis: auto;
   margin-right: 20px;
   @media (max-width: 620px) {
     flex-wrap: wrap;
+    margin-right: 0px;
   }
+  // @media (max-width: 560px) {
+  //   align-items: 
+  // }
   @media (max-width: 420px) {
     flex-direction: column;
     align-items: center;
@@ -86,6 +98,7 @@ const CardWrapper = styled.div`
 
 const LeftCol = styled.div`
   display: flex;
+  flex: 1 1 100%;
   @media (max-width: 420px) {
     flex-direction: column;
     align-items: center;
@@ -94,6 +107,7 @@ const LeftCol = styled.div`
 
 const RightCol = styled.div`
   display: flex;
+  flex: 1 1 100%;
   @media (max-width: 420px) {
     flex-direction: column;
     align-items: center;
@@ -107,6 +121,13 @@ const BottomContent = styled.div`
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+  }
+  @media (max-width: 420px) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 30px;
   }
 `;
 
@@ -115,6 +136,11 @@ const LeftWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 50%;
+  @media (max-width: 420px) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 `;
 
 const RightWrapper = styled.div`
