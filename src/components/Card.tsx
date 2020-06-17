@@ -7,7 +7,6 @@ type CardProps = {
 };
 
 const Card = ({ title, paragraph }: CardProps) => {
-
   const [hover, setHover] = useState(false);
 
   const handleHover = () => {
@@ -31,7 +30,7 @@ const CardWrapper = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 5px;
+  margin-right: 10px;
 `;
 
 const Title = styled.h1`

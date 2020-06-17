@@ -17,7 +17,8 @@ export default Tagline;
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 20vh;
+  height: 20%;
+  min-height: 20vw;
   display: flex;
   align-items: center;
   justify-content: center;

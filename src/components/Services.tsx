@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import Card from './Card';
 
 const Services: React.FC = () => {
+  const handleClick = () => {
+    window.location.href = 'mailto:anna@annajcarey.com';
+  };
+
   return (
     <Wrapper>
       <Headline>Our Services</Headline>
@@ -19,18 +23,20 @@ const Services: React.FC = () => {
         <Card paragraph="some other words" title="Growth Strategy Consulting" />
       </CardWrapper>
       <BottomWrapper>
-        <LeftWrapper>
-          <H>Systematically increase ROAS and LTV</H>
-          <P>
-            We design and implement retention and conversion strategies that
-            enable efficient marketing teams to generate and nurture millions of
-            perosnal customer relationships.
-          </P>
-          <Button>Contact Us</Button>
-        </LeftWrapper>
-        <RightWrapper>
-          <ImagePlaceholder />
-        </RightWrapper>
+        <BottomContent>
+          <LeftWrapper>
+            <H>Systematically increase ROAS and LTV</H>
+            <P>
+              We design and implement retention and conversion strategies that
+              enable efficient marketing teams to generate and nurture millions
+              of perosnal customer relationships.
+            </P>
+            <Button onClick={handleClick}>Contact Us</Button>
+          </LeftWrapper>
+          <RightWrapper>
+            <ImagePlaceholder />
+          </RightWrapper>
+        </BottomContent>
       </BottomWrapper>
     </Wrapper>
   );
@@ -40,7 +46,8 @@ export default Services;
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 80vh;
+  height: 80%;
+  min-height: 80vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -52,12 +59,16 @@ const CardWrapper = styled.div`
   justify-content: space-around;
 `;
 
+const BottomContent = styled.div`
+  width: 560px;
+  display: flex;
+`;
+
 const LeftWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 50%;
-  margin-left: 40px;
 `;
 
 const RightWrapper = styled.div`
@@ -70,6 +81,7 @@ const RightWrapper = styled.div`
 const BottomWrapper = styled.div`
   margin-top: 3%;
   display: flex;
+  margin-bottom: 5%;
 `;
 
 const Headline = styled.h1`

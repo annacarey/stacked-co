@@ -35,7 +35,8 @@ export default Services;
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 30vh;
+  height: 30%;
+  min-height: 30vw;
   display: flex;
   flex-direction: column;
   background-color: #1c7975;

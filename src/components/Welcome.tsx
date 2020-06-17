@@ -2,13 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Welcome: React.FC = () => {
+  const handleClick = () => {
+    window.location.href = 'mailto:anna@annajcarey.com';
+  };
   return (
     <Wrapper>
       <TopDiv> </TopDiv>
       <Header>
         <h1>Stacked Co.</h1>
         <P>Technical growth marketers deployed</P>
-        <Button>Contact Us</Button>
+        <Button onClick={handleClick}>Contact Us</Button>
       </Header>
       <LogoContainer>
         <P>Members of the collective have worked with:</P>
@@ -29,7 +32,8 @@ export default Welcome;
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 60vh;
+  height: 60%;
+  min-height: 60vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,6 +68,7 @@ const Button = styled.button`
   height: 30px;
   align-self: center;
   margin-top: 20px;
+  cursor: pointer;
 `;
 
 const LogoContainer = styled.div`
