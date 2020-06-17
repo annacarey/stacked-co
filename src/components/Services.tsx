@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import office from '../images/office.jpeg'
+import office from '../images/office.jpeg';
 import Card from './Card';
 
 const Services: React.FC = () => {
