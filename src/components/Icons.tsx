@@ -36,7 +36,7 @@ export default Services;
 const Wrapper = styled.div`
   width: 100%;
   height: 30%;
-  min-height: 200px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   background-color: #1c7975;
@@ -74,9 +74,12 @@ const Logo = styled.div`
 `;
 
 const Headline = styled.h1`
-  font-size: 20px;
+  font-size: 30px;
   color: white;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 30px;
   text-align: center;
+  @media (max-width: 420px) {
+    font-size: 25px;
+  }
 `;

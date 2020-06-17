@@ -21,8 +21,8 @@ const Card = ({ frontTitle, backTitle, paragraph }: CardProps) => {
       onMouseEnter={handleHover}
       onMouseLeave={handleHover}
     >
-      {hover && <CardFront frontTitle={frontTitle} />}
-      {!hover && <CardBack backTitle={backTitle} paragraph={paragraph} />}
+      {!hover && <CardFront frontTitle={frontTitle} />}
+      {hover && <CardBack backTitle={backTitle} paragraph={paragraph} />}
     </CardWrapper>
   );
 };
@@ -30,16 +30,16 @@ const Card = ({ frontTitle, backTitle, paragraph }: CardProps) => {
 export default Card;
 
 const CardWrapper = styled.div`
-  max-width: 47.5%;
+  max-width: 205px;
   width: 40%;
   min-width: 120px;
-  transition: margin-top ease 0.5s;
+  transition: margin-top ease 0.3s;
   height: 250px;
   margin-top: ${(props) => (!props.hover ? '0px' : '-10px')};
   background-color: #20545e;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   margin-right: 5px;
@@ -48,33 +48,16 @@ const CardWrapper = styled.div`
     margin-bottom: 20px;
     margin-right: 20px;
     width: 220px;
-    height: 180px;
+    height: 160px;
     min-width: 210px;
     margin-left: 0px;
   }
-  // @media (max-width: 560px) {
-  //   margin-bottom: 20px;
-  //   margin-right: 20px;
-  //   height: 150px;
-  // }
   @media (max-width: 420px) {
     min-width: 250px;
     min-height: 160px;
     margin-right: 0px;
     margin-left: 0px;
+    transition: none;
+    margin-top: 0px;
   }
-`;
-
-const Title = styled.h1`
-  font-size: 14px;
-  color: white;
-  margin: 0px;
-  padding: 10px;
-  text-align: center;
-`;
-
-const P = styled.p`
-  font-size: 12px;
-  color: white;
-  margin: 0px;
 `;

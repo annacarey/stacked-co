@@ -33,6 +33,7 @@ export default Welcome;
 const Wrapper = styled.div`
   width: 100%;
   height: calc(100vh - 50px);
+  min-height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,6 +59,9 @@ const Header = styled.div`
 const H1 = styled.h1`
   margin: 0px;
   font-size: 60px;
+  @media (max-width: 420px) {
+    font-size: 50px;
+  }
 `;
 
 const H2 = styled.p`
@@ -65,6 +69,9 @@ const H2 = styled.p`
   font-size: 20px;
   padding-left: 10px;
   padding-right: 10px;
+  @media (max-width: 420px) {
+    font-size: 18px;
+  }
 `;
 
 const P = styled.p`
@@ -76,8 +83,8 @@ const Button = styled.button`
   background-color: white;
   border: none;
   color: #1c7975;
-  width: 150px;
-  height: 30px;
+  width: 180px;
+  height: 40px;
   align-self: center;
   margin-top: 20px;
   cursor: pointer;

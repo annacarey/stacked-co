@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import office from '../images/office.jpeg'
 import Card from './Card';
 
 const Services: React.FC = () => {
@@ -49,7 +50,7 @@ const Services: React.FC = () => {
               <Button onClick={handleClick}>Contact Us</Button>
             </LeftWrapper>
             <RightWrapper>
-              <ImagePlaceholder />
+              <Image src={office} />
             </RightWrapper>
           </BottomContent>
         </BottomWrapper>
@@ -67,6 +68,10 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (min-width: 800px) {
+    height: 100%;
+    min-height: 575px;
+  }
 `;
 
 const MainWrapper = styled.div`
@@ -86,48 +91,56 @@ const CardWrapper = styled.div`
   @media (max-width: 620px) {
     flex-wrap: wrap;
     margin-right: 0px;
+    margin-left: 0px;
   }
-  // @media (max-width: 560px) {
-  //   align-items: 
-  // }
   @media (max-width: 420px) {
     flex-direction: column;
     align-items: center;
+    margin-left: 0px;
   }
 `;
 
 const LeftCol = styled.div`
   display: flex;
   flex: 1 1 100%;
+  justify-content: center;
   @media (max-width: 420px) {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 `;
 
 const RightCol = styled.div`
   display: flex;
   flex: 1 1 100%;
+  justify-content: center;
   @media (max-width: 420px) {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 `;
 
 const BottomContent = styled.div`
-  width: 560px;
+  width: 100%;
+  margin-left: 35px;
   display: flex;
   @media (max-width: 620px) {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-left: 0px;
   }
   @media (max-width: 420px) {
     flex-direction: column;
     align-items: center;
     width: 100%;
     padding: 30px;
+  }
+  @media (min-width: 900px) {
+    width: 860px;
   }
 `;
 
@@ -136,10 +149,13 @@ const LeftWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 50%;
+  @media (max-width: 620px) {
+    width: 410px;
+  }
   @media (max-width: 420px) {
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 210px;
   }
 `;
 
@@ -151,48 +167,68 @@ const RightWrapper = styled.div`
 `;
 
 const BottomWrapper = styled.div`
-  margin-top: 3%;
+  margin-top: 7%;
   display: flex;
-  margin-bottom: 5%;
+  margin-bottom: 7%;
 `;
 
 const Headline = styled.h1`
-  font-size: 20px;
+  font-size: 30px;
   color: #20545e;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 30px;
   text-align: center;
   color: 20545e;
+  @media (max-width: 420px) {
+    font-size: 25px;
+  }
 `;
 
 const H = styled.h1`
-  font-size: 16px;
+  font-size: 20px;
   color: #20545e;
 `;
 
 const P = styled.p`
-  font-size: 12px;
+  font-size: 14px;
   color: #20545e;
   margin-bottom: 0px;
+  @media (max-width: 420px) {
+    margin-bottom: 30px;
+  }
 `;
 
-const ImagePlaceholder = styled.div`
-  width: 200px;
-  height: 100px;
+const Image = styled.img`
+  width: 70%;
+  height: auto;
   background-color: grey;
+  margin-top: 3%;
   @media (max-width: 620px) {
     margin-top: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  @media (max-width: 420px) {
+    margin-bottom: 30px;
+    width: 140%;
   }
 `;
 
 const Button = styled.button`
+  align-self: flex-start;
   background-color: #20545e;
   border: none;
   color: white;
-  width: 150px;
-  height: 30px;
-  align-self: center;
-  margin-top: 20px;
+  width: 180px;
+  height: 40px;
   cursor: pointer;
   outline: none;
+  margin-bottom: 3%;
+  margin-top: 10%;
+  @media (max-width: 620px) {
+    margin-bottom: 30px;
+  }
+  @media (max-width: 420px) {
+    margin-bottom: 30px;
+  }
 `;

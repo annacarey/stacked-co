@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 type CardBackProps = {
@@ -7,10 +7,9 @@ type CardBackProps = {
 };
 
 const CardBack = ({ backTitle, paragraph }: CardBackProps) => {
-
   return (
     <CardWrapper>
-     <Title>{backTitle} </Title>
+      <Title>{backTitle} </Title>
       <P>{paragraph} </P>
     </CardWrapper>
   );
