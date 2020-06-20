@@ -37,11 +37,11 @@ const Card = ({ frontTitle, backTitle, paragraph, image }: CardProps) => {
 export default Card;
 
 const CardWrapper = styled.div`
-  max-width: 250px;
+  max-width: 280px;
   width: calc(40% - 10px);
   min-width: 120px;
   transition: margin-top ease 0.3s;
-  height: 350px;
+  height: 370px;
   margin-top: ${(props) => (!props.hover ? '0px' : '-10px')};
   background-image: url(${(props) => props.image});
   background-repeat: no-repeat;

@@ -10,34 +10,38 @@ const Services: React.FC = () => {
     <Wrapper>
       <Headline>What We Love</Headline>
       <IconWrapper>
-        <Icon>
-          <Logo src={gear} />
-          <strong>
-            <Text>Systems</Text>
-            <Text>Architecture</Text>
-          </strong>
-        </Icon>
-        <Icon>
-          <Logo src={chat} />
-          <strong>
-            <Text>Retention</Text>
-            <Text>& CRM</Text>
-          </strong>
-        </Icon>
-        <Icon>
-          <Logo src={list} />
-          <strong>
-            <Text>UX</Text>
-            <Text>& CRO</Text>
-          </strong>
-        </Icon>
-        <Icon>
-          <Logo src={chart} />
-          <strong>
-            <Text>Growth</Text>
-            <Text>Training</Text>
-          </strong>
-        </Icon>
+        <TopRow>
+          <Icon>
+            <Logo src={gear} />
+            <strong>
+              <Text>Systems</Text>
+              <Text>Architecture</Text>
+            </strong>
+          </Icon>
+          <Icon>
+            <Logo src={chat} />
+            <strong>
+              <Text>Retention</Text>
+              <Text>& CRM</Text>
+            </strong>
+          </Icon>
+        </TopRow>
+        <BottomRow>
+          <Icon>
+            <Logo src={list} />
+            <strong>
+              <Text>UX</Text>
+              <Text>& CRO</Text>
+            </strong>
+          </Icon>
+          <Icon>
+            <Logo src={chart} />
+            <strong>
+              <Text>Growth</Text>
+              <Text>Training</Text>
+            </strong>
+          </Icon>
+        </BottomRow>
       </IconWrapper>
     </Wrapper>
   );
@@ -52,8 +56,11 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #20545e;
+  justify-conent: center;
+  align-items: center;
   @media (max-width: 420px) {
-    height: 25%;
+    height: 50%;
+    padding-bottom: 50px;
   }
 `;
 
@@ -62,6 +69,31 @@ const IconWrapper = styled.div`
   align-items: center;
   flex: 1;
   justify-content: space-evenly;
+  width: 80%;
+  @media (max-width: 420px) {
+    flex-direction: column;
+    width: 100%;
+  }
+`;
+
+const TopRow = styled.div`
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  @media (max-width: 420px) {
+    padding-top: 30px;
+    justify-content: space-evenly;
+  }
+`;
+
+const BottomRow = styled.div`
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  @media (max-width: 420px) {
+    padding-top: 50px;
+    justify-content: space-evenly;
+  }
 `;
 
 const Icon = styled.div`
@@ -99,5 +131,7 @@ const Headline = styled.h1`
   text-align: center;
   @media (max-width: 420px) {
     font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 50px;
   }
 `;

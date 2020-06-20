@@ -25,6 +25,9 @@ const Wrapper = styled.div`
   @media (min-width: 900px) {
     height: 16%;
   }
+  @media (max-width: 420px) {
+    min-height: 38vh;
+  }
 `;
 
 const Text = styled.p`
@@ -45,5 +48,6 @@ const Text = styled.p`
   }
   @media (max-width: 420px) {
     font-size: 25px;
+    text-align: left;
   }
 `;

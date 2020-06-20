@@ -133,9 +133,12 @@ const Button = styled.button`
   width: 180px;
   height: 40px;
   align-self: center;
-  margin-top: 20px;
+  margin-top: 30px;
   cursor: pointer;
   outline: none;
+  @media (max-width: 420px) {
+    margin-top: 30px;
+  }
 `;
 
 const LogoContainer = styled.div`

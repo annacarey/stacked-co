@@ -85,6 +85,7 @@ const CardWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     margin-left: 0px;
+    margin-bottom: 50px;
   }
 `;
 
@@ -111,7 +112,6 @@ const RightCol = styled.div`
   @media (max-width: 620px) {
     width: calc(100% - 60px);
     margin-left: 20px;
-
   }
   @media (max-width: 420px) {
     flex-direction: column;

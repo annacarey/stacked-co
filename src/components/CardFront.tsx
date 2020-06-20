@@ -8,10 +8,10 @@ type CardFrontProps = {
 const CardFront = ({ frontTitle }: CardFrontProps) => {
   return (
     <CardWrapper>
-        <TitleContainer>
+      <TitleContainer>
         <Title>{frontTitle} </Title>
-        </TitleContainer>
-      
+      </TitleContainer>
+
       <ButtonContainer>
         <Button>Learn More</Button>
       </ButtonContainer>
@@ -22,18 +22,17 @@ const CardFront = ({ frontTitle }: CardFrontProps) => {
 export default CardFront;
 
 const CardWrapper = styled.div`
-    height: 100%;
-    display: flex;
-    align-items: baseline;
-    justify-content: baseline;
-    flex-direction: column;
+  height: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: baseline;
+  flex-direction: column;
 `;
 const TitleContainer = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-
-`
+`;
 const Title = styled.h1`
   font-size: 24px;
   color: white;
