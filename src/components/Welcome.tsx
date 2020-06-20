@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import stacks from '../images/stacks.png';
-import Navbar from './Navbar';
 import brave from '../images/brave.png';
 import daybreaker from '../images/daybreaker.png';
 import dior from '../images/dior.png';
@@ -16,12 +15,14 @@ const Welcome: React.FC = () => {
   };
   return (
     <Wrapper>
-      <Navbar />
+      {/* <Navbar /> */}
       <TopDiv> </TopDiv>
       <Header>
-        <H1>Stacked Co. </H1>
-        <H2>Technical growth marketers deployed</H2>
-        <Button onClick={handleClick}>Contact Us</Button>
+        <HeadingContainer>
+          <H1>Stacked Co. </H1>
+          <H2>Technical growth marketers deployed</H2>
+          <Button onClick={handleClick}>Contact Us</Button>
+        </HeadingContainer>
       </Header>
       <LogoContainer>
         <P>Members of the collective have worked with:</P>
@@ -76,12 +77,12 @@ const Wrapper = styled.div`
 `;
 
 const TopDiv = styled.div`
-  height: 20%;
+  height: calc(20% + 40px);
 `;
 
 const Header = styled.div`
   width: 100%;
-  height: calc(60% - 70px);
+  height: 60%;
   color: white;
   display: flex;
   flex-direction: column;
@@ -91,6 +92,14 @@ const Header = styled.div`
   @media (max-width: 900px) {
     height: calc(60% - 10px);
   }
+`;
+
+const HeadingContainer = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
 `;
 
 const H1 = styled.h1`
@@ -152,23 +161,23 @@ const Logos = styled.div`
     justify-content: center;
     -webkit-box-pack: center;
     width: initial;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
   }
 `;
 
-const LogoRow1 = styled.div`
-  display: flex;
-  align-items: center;
-  width: 70%;
-  justify-content: space-around;
-`;
+// const LogoRow1 = styled.div`
+//   display: flex;
+//   align-items: center;
+//   width: 70%;
+//   justify-content: space-around;
+// `;
 
-const LogoRow2 = styled.div`
-  display: flex;
-  width: 50%;
-  align-items: center;
-  justify-content: space-around;
-`;
+// const LogoRow2 = styled.div`
+//   display: flex;
+//   width: 50%;
+//   align-items: center;
+//   justify-content: space-around;
+// `;
 
 const Logo = styled.img`
   width: auto;

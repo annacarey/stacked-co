@@ -13,14 +13,19 @@ type CardProps = {
 const Card = ({ frontTitle, backTitle, paragraph, image }: CardProps) => {
   const [hover, setHover] = useState(false);
 
-  const handleHover = () => {
-    setHover(!hover);
+  const handleMouseEnter = () => {
+    setHover(true);
   };
+
+  const handleMouseLeave = () => {
+    setHover(false);
+  };
+
   return (
     <CardWrapper
       hover={hover}
-      onMouseEnter={handleHover}
-      onMouseLeave={handleHover}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       image={image}
     >
       {!hover && <CardFront frontTitle={frontTitle} />}
@@ -32,11 +37,11 @@ const Card = ({ frontTitle, backTitle, paragraph, image }: CardProps) => {
 export default Card;
 
 const CardWrapper = styled.div`
-  max-width: 205px;
-  width: 40%;
+  max-width: 250px;
+  width: calc(40% - 10px);
   min-width: 120px;
   transition: margin-top ease 0.3s;
-  height: 250px;
+  height: 350px;
   margin-top: ${(props) => (!props.hover ? '0px' : '-10px')};
   background-image: url(${(props) => props.image});
   background-repeat: no-repeat;
@@ -48,11 +53,16 @@ const CardWrapper = styled.div`
   flex-direction: column;
   margin-right: 5px;
   margin-left: 5px;
+  @media (max-width: 850px) {
+    height: 280px;
+  }
   @media (max-width: 620px) {
     margin-bottom: 20px;
     margin-right: 20px;
+    transition: none;
     width: 220px;
     height: 160px;
+    margin-top: 0px;
     min-width: 210px;
     margin-left: 0px;
   }

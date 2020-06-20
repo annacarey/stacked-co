@@ -23,19 +23,26 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   @media (min-width: 900px) {
-    min-height: 35vh;
-    height: 35vh;
+    height: 16%;
   }
 `;
 
 const Text = styled.p`
-  font-size: 30px;
+  font-size: 40px;
   color: #20545e;
   margin-left: 15%;
   margin-right: 15%;
   margin-top: 12%;
   margin-bottom: 12%;
   text-align: center;
+  @media (min-width: 900px) {
+    height: 14%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  @media (max-width: 900px) {
+    font-size: 30px;
+  }
   @media (max-width: 420px) {
     font-size: 25px;
   }

@@ -17,7 +17,7 @@ const Services: React.FC = () => {
             enable efficient marketing teams to generate and nurture millions of
             perosnal customer relationships.
           </P>
-          <Button onClick={handleClick}>Let's Chat</Button>
+          <Button onClick={handleClick}>Let&rsquo;s Chat</Button>
         </LeftWrapper>
         <RightWrapper>
           <Image src={office} />
@@ -60,7 +60,7 @@ const BottomContent = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 30px;
+    // padding: 30px;
   }
   @media (min-width: 900px) {
     width: 860px;
@@ -79,7 +79,8 @@ const LeftWrapper = styled.div`
   @media (max-width: 420px) {
     flex-direction: column;
     align-items: center;
-    width: 210px;
+    width: 65%;
+    padding-left: 0px;
   }
 `;
 
@@ -88,6 +89,9 @@ const RightWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 420px) {
+    width: 65%;
+  }
 `;
 
 const H = styled.h1`
@@ -112,9 +116,6 @@ const Image = styled.img`
   @media (max-width: 620px) {
     margin-top: 20px;
     width: 100%;
-  }
-  @media (max-width: 420px) {
-    width: 140%;
   }
 `;
 

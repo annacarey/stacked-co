@@ -14,7 +14,7 @@ const Services: React.FC = () => {
         <CardWrapper>
           <LeftCol>
             <Card
-              paragraph="We identify gaps in your retention and CRO capabilities and build a roadmap to generate value immediately & systematically increase revenue into the future."
+              paragraph="We identify gaps in your retention and CRO capabilities and roadmap to generate value immediately & systematically increase revenue into the future."
               frontTitle="Engagement & Retention Audit"
               backTitle="An expert playbook built just for you"
               image={engagement}
@@ -92,10 +92,15 @@ const LeftCol = styled.div`
   display: flex;
   flex: 1 1 100%;
   justify-content: center;
+  @media (max-width: 620px) {
+    width: calc(100% - 60px);
+    margin-left: 20px;
+  }
   @media (max-width: 420px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: 0;
   }
 `;
 
@@ -103,10 +108,16 @@ const RightCol = styled.div`
   display: flex;
   flex: 1 1 100%;
   justify-content: center;
+  @media (max-width: 620px) {
+    width: calc(100% - 60px);
+    margin-left: 20px;
+
+  }
   @media (max-width: 420px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: 0;
   }
 `;
 

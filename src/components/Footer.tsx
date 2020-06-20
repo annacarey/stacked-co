@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from '../images/stacked.png'
+import logo from '../images/stacked.png';
 
 const Footer: React.FC = () => {
   return (
@@ -48,6 +48,9 @@ const LeftLinks = styled.div`
   align-items: center;
   justify-content: center;
   padding-left: 5%;
+  @media (max-width: 420px) {
+    padding-left: 10%;
+  }
 `;
 
 const Text = styled.p`

@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import chart from '../images/chart.png';
+import chat from '../images/chat.png';
+import gear from '../images/gear.png';
+import list from '../images/list.png';
 
 const Services: React.FC = () => {
   return (
@@ -7,24 +11,32 @@ const Services: React.FC = () => {
       <Headline>What We Love</Headline>
       <IconWrapper>
         <Icon>
-          <Logo />
-          <Text>Systems</Text>
-          <Text>Architecture</Text>
+          <Logo src={gear} />
+          <strong>
+            <Text>Systems</Text>
+            <Text>Architecture</Text>
+          </strong>
         </Icon>
         <Icon>
-          <Logo />
-          <Text>Retention</Text>
-          <Text>& CRM</Text>
+          <Logo src={chat} />
+          <strong>
+            <Text>Retention</Text>
+            <Text>& CRM</Text>
+          </strong>
         </Icon>
         <Icon>
-          <Logo />
-          <Text>UX</Text>
-          <Text>& CRO</Text>
+          <Logo src={list} />
+          <strong>
+            <Text>UX</Text>
+            <Text>& CRO</Text>
+          </strong>
         </Icon>
         <Icon>
-          <Logo />
-          <Text>Growth</Text>
-          <Text>Training</Text>
+          <Logo src={chart} />
+          <strong>
+            <Text>Growth</Text>
+            <Text>Training</Text>
+          </strong>
         </Icon>
       </IconWrapper>
     </Wrapper>
@@ -36,10 +48,13 @@ export default Services;
 const Wrapper = styled.div`
   width: 100%;
   height: 30%;
-  min-height: 300px;
+  min-height: 350px;
   display: flex;
   flex-direction: column;
   background-color: #20545e;
+  @media (max-width: 420px) {
+    height: 25%;
+  }
 `;
 
 const IconWrapper = styled.div`
@@ -67,17 +82,20 @@ const Text = styled.p`
   }
 `;
 
-const Logo = styled.div`
-  background-color: grey;
-  width: 50px;
-  height: 50px;
+const Logo = styled.img`
+  width: auto;
+  height: 80px;
+  padding-bottom: 20px;
+  @media (max-width: 420px) {
+    height: 60px;
+  }
 `;
 
 const Headline = styled.h1`
   font-size: 30px;
   color: white;
   margin-top: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   text-align: center;
   @media (max-width: 420px) {
     font-size: 25px;
