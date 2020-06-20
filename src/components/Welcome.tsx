@@ -11,9 +11,9 @@ import revel from '../images/revel.png';
 import tushy from '../images/tushy.png';
 
 const Welcome: React.FC = () => {
-  // const handleClick = () => {
-  //   window.location.href = 'mailto:anna@annajcarey.com';
-  // };
+  const handleClick = () => {
+    window.location.href = 'mailto:anna@annajcarey.com';
+  };
   return (
     <Wrapper>
       <Navbar />
@@ -21,7 +21,7 @@ const Welcome: React.FC = () => {
       <Header>
         <H1>Stacked Co. </H1>
         <H2>Technical growth marketers deployed</H2>
-        {/* <Button onClick={handleClick}>Contact Us</Button> */}
+        <Button onClick={handleClick}>Contact Us</Button>
       </Header>
       <LogoContainer>
         <P>Members of the collective have worked with:</P>
@@ -96,7 +96,7 @@ const Header = styled.div`
 const H1 = styled.h1`
   margin: 0px;
   font-size: 60px;
-  margin-top: -15%;
+  margin-top: -7%;
   @media (max-width: 420px) {
     font-size: 50px;
   }
