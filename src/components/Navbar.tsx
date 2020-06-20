@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import stackedLogo from '../images/stacked-logo.png';
 
 const Container: React.FC = () => {
   return (
     <Wrapper>
       <LeftLinks>
-        <Logo> </Logo>
+        <Logo src={stackedLogo} />
       </LeftLinks>
       <RightLinks>
         <A href="#services"> Services </A>
@@ -19,7 +20,7 @@ export default Container;
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 50px;
+  height: 70px;
   flex-shrink: 0;
   display: flex;
 `;
@@ -40,10 +41,9 @@ const LeftLinks = styled.div`
   justify-content: center;
 `;
 
-const Logo = styled.div`
-  width: 20px;
-  height: 20px;
-  background-color: #808080;
+const Logo = styled.img`
+  width: 40px;
+  height: 40px;
 `;
 
 const A = styled.a`
@@ -52,4 +52,5 @@ const A = styled.a`
   color: #20545e;
   text-decoration: none;
   font-size: 14px;
+  color: white;
 `;

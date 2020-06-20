@@ -39,7 +39,7 @@ const Wrapper = styled.div`
   min-height: 300px;
   display: flex;
   flex-direction: column;
-  background-color: #1c7975;
+  background-color: #20545e;
 `;
 
 const IconWrapper = styled.div`

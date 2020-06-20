@@ -7,9 +7,10 @@ type CardProps = {
   frontTitle: string;
   backTitle: string;
   paragraph: string;
+  image: string;
 };
 
-const Card = ({ frontTitle, backTitle, paragraph }: CardProps) => {
+const Card = ({ frontTitle, backTitle, paragraph, image }: CardProps) => {
   const [hover, setHover] = useState(false);
 
   const handleHover = () => {
@@ -20,6 +21,7 @@ const Card = ({ frontTitle, backTitle, paragraph }: CardProps) => {
       hover={hover}
       onMouseEnter={handleHover}
       onMouseLeave={handleHover}
+      image={image}
     >
       {!hover && <CardFront frontTitle={frontTitle} />}
       {hover && <CardBack backTitle={backTitle} paragraph={paragraph} />}
@@ -36,7 +38,9 @@ const CardWrapper = styled.div`
   transition: margin-top ease 0.3s;
   height: 250px;
   margin-top: ${(props) => (!props.hover ? '0px' : '-10px')};
-  background-color: #20545e;
+  background-image: url(${(props) => props.image});
+  background-repeat: no-repeat;
+  background-size: cover;
   justify-content: center;
   align-items: center;
   flex: 1 1 auto;

@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import logo from '../images/stacked.png'
 
 const Footer: React.FC = () => {
   return (
     <Wrapper>
       <LeftLinks>
         <LogoContainer>
-          <Logo />
+          <Logo src={logo} />
           <Text>Terms | Privacy | Cookies</Text>
         </LogoContainer>
       </LeftLinks>
@@ -23,11 +24,11 @@ export default Footer;
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 80px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color #1c7975; 
+  background-color #20545e; 
   flex-grow: 1;
 `;
 
@@ -59,13 +60,12 @@ const LogoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 `;
 
-const Logo = styled.div`
-  width: 20px;
-  height: 20px;
-  background-color: #808080;
+const Logo = styled.img`
+  width: 150px;
+  margin-bottom: 10px;
 `;
 
 const A = styled.a`

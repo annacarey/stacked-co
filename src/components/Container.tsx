@@ -1,21 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 import Welcome from './Welcome';
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 import Tagline from './Tagline';
 import Footer from './Footer';
 import Icons from './Icons';
 import Services from './Services';
+import Closing from './Closing';
 
 const Container: React.FC = () => {
   return (
     <Wrapper>
-      <Navbar />
       <Body>
         <Welcome />
         <Tagline />
-        <Icons />
         <Services />
+        <Icons />
+        <Closing />
         <Footer />
       </Body>
     </Wrapper>
