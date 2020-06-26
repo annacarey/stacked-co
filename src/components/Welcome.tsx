@@ -11,7 +11,7 @@ import matchabar from '../images/matchabar.png';
 
 const Welcome: React.FC = () => {
   const handleClick = () => {
-    window.location.href = 'mailto:anna@annajcarey.com';
+    window.location.href = 'mailto:dean@stackedco.co';
   };
   return (
     <Wrapper>

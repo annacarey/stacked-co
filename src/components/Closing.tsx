@@ -4,7 +4,7 @@ import office from '../images/office.jpeg';
 
 const Services: React.FC = () => {
   const handleClick = () => {
-    window.location.href = 'mailto:anna@annajcarey.com';
+    window.location.href = 'mailto:dean@stackedco.co';
   };
 
   return (
