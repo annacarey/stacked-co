@@ -7,7 +7,7 @@ import dior from '../images/dior.png';
 import hellofresh from '../images/hellofresh.png';
 import morningbrew from '../images/morningbrew.png';
 import revel from '../images/revel.png';
-import tushy from '../images/tushy.png';
+import matchabar from '../images/matchabar.png';
 
 const Welcome: React.FC = () => {
   const handleClick = () => {
@@ -25,33 +25,29 @@ const Welcome: React.FC = () => {
         </HeadingContainer>
       </Header>
       <LogoContainer>
-        <P>Members of the collective have worked with:</P>
+        <P>Our leadership has worked with:</P>
         <Logos>
-          {/* <LogoRow1> */}
-          <A>
-            <Logo height={30} src={brave} />
+          <A marginRight={15}>
+            <Logo height={35} src={matchabar} />
           </A>
-          <A>
-            <Logo height={25} src={tushy} />
-          </A>
-          <A>
-            <Logo height={50} src={revel} />
-          </A>
-          <A>
+          <A marginRight={15}>
             <Logo height={25} src={dior} />
           </A>
-          {/* </LogoRow1> */}
-          {/* <LogoRow2> */}
+          <A marginRight={20}>
+            <Logo height={40} src={revel} />
+          </A>
           <A>
-            <Logo height={40} src={morningbrew} />
+            <Logo height={40} src={hellofresh} />
           </A>
           <A>
             <Logo height={30} src={daybreaker} />
           </A>
           <A>
-            <Logo height={40} src={hellofresh} />
+            <Logo height={40} src={morningbrew} />
           </A>
-          {/* </LogoRow2> */}
+          <A>
+            <Logo height={30} src={brave} />
+          </A>
         </Logos>
       </LogoContainer>
     </Wrapper>
@@ -92,6 +88,9 @@ const Header = styled.div`
   @media (max-width: 900px) {
     height: calc(60% - 10px);
   }
+  @media (max-width: 365px) {
+    height: calc(60% - 60px);
+  }
 `;
 
 const HeadingContainer = styled.div`
@@ -124,6 +123,10 @@ const H2 = styled.p`
 const P = styled.p`
   margin: 0px;
   font-size: 12px;
+  @media (max-width: 450px) {
+    align-self: center;
+    margin-bottom: 10px;
+  }
 `;
 
 const Button = styled.button`
@@ -168,20 +171,6 @@ const Logos = styled.div`
   }
 `;
 
-// const LogoRow1 = styled.div`
-//   display: flex;
-//   align-items: center;
-//   width: 70%;
-//   justify-content: space-around;
-// `;
-
-// const LogoRow2 = styled.div`
-//   display: flex;
-//   width: 50%;
-//   align-items: center;
-//   justify-content: space-around;
-// `;
-
 const Logo = styled.img`
   width: auto;
   height: ${(props) => props.height};
@@ -203,5 +192,20 @@ const A = styled.a`
     display: flex;
     flex-basis: 20%;
     justify-content: center;
+  }
+  @media (max-width: 441px) {
+    flex-basis: 0%;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  @media (max-width: 365px) {
+    flex-basis: 28%;
+  }
+  @media (max-width: 375px) {
+    margin-right: ${(props) => (props.marginRight ? props.marginRight : 0)};
+  }
+  @media (max-width: 335px) {
+    flex-basis: 0%;
   }
 `;
