@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import stacks from '../images/stacks.png';
+import stacks from '../images/stacks.jpg';
 import brave from '../images/brave.png';
 import daybreaker from '../images/daybreaker.png';
 import dior from '../images/dior.png';
