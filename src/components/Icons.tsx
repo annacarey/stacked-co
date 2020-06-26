@@ -8,7 +8,7 @@ import list from '../images/list.png';
 const Services: React.FC = () => {
   return (
     <Wrapper>
-      <Headline>What We Love</Headline>
+      <Headline>Our Expertise</Headline>
       <IconWrapper>
         <TopRow>
           <Icon>
@@ -52,11 +52,11 @@ export default Services;
 const Wrapper = styled.div`
   width: 100%;
   height: 30%;
-  min-height: 350px;
+  min-height: 450px;
   display: flex;
   flex-direction: column;
   background-color: #20545e;
-  justify-conent: center;
+  justify-content: center;
   align-items: center;
   @media (max-width: 420px) {
     height: 50%;
@@ -68,6 +68,7 @@ const IconWrapper = styled.div`
   display: flex;
   align-items: center;
   flex: 1;
+  max-height: 150px;
   justify-content: space-evenly;
   width: 80%;
   @media (max-width: 420px) {
@@ -129,8 +130,8 @@ const Logo = styled.img`
 const Headline = styled.h1`
   font-size: 30px;
   color: white;
-  margin-top: 40px;
-  margin-bottom: 0px;
+  height: 20%;
+  margin-bottom: 50px;
   text-align: center;
   @media (max-width: 420px) {
     font-size: 25px;
