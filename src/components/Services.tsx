@@ -97,7 +97,7 @@ const LeftCol = styled.div`
     width: calc(100% - 60px);
     margin-left: 20px;
   }
-  @media (max-width: 420px) {
+  @media (max-width: 500px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -113,7 +113,7 @@ const RightCol = styled.div`
     width: calc(100% - 60px);
     margin-left: 20px;
   }
-  @media (max-width: 420px) {
+  @media (max-width: 500px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;

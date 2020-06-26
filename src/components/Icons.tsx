@@ -118,6 +118,9 @@ const Logo = styled.img`
   width: auto;
   height: 80px;
   padding-bottom: 20px;
+  @media (max-width: 580px) {
+    height: 60px;
+  }
   @media (max-width: 420px) {
     height: 60px;
   }

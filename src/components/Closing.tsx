@@ -11,11 +11,10 @@ const Services: React.FC = () => {
     <Wrapper id="services">
       <BottomContent>
         <LeftWrapper>
-          <H>Systematically increase ROAS and LTV</H>
+          <H>Companies we work with grow exponentially</H>
           <P>
-            We design and implement retention and conversion strategies that
-            enable efficient marketing teams to generate and nurture millions of
-            perosnal customer relationships.
+            We are a team of technical marketers who have run growth and
+            retention at some of the fastest growing companies in the world.
           </P>
           <Button onClick={handleClick}>Let&rsquo;s Chat</Button>
         </LeftWrapper>
@@ -75,6 +74,10 @@ const LeftWrapper = styled.div`
   padding-left: 50px;
   @media (max-width: 620px) {
     width: 410px;
+    padding-left: 0px;
+  }
+  @media (max-width: 500px) {
+    width: 350px;
   }
   @media (max-width: 420px) {
     flex-direction: column;
@@ -88,7 +91,7 @@ const RightWrapper = styled.div`
   width: 50%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   @media (max-width: 420px) {
     width: 65%;
   }
@@ -98,12 +101,16 @@ const H = styled.h1`
   font-size: 20px;
   color: #20545e;
   margin-top: 0;
+  @media (min-width: 620px) {
+    font-size: 24px;
+  }
 `;
 
 const P = styled.p`
   font-size: 14px;
   color: #20545e;
   margin-bottom: 0px;
+  width: 100%;
   @media (max-width: 420px) {
     margin-bottom: 30px;
   }
