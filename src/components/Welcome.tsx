@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import stacks from '../images/stacks.jpg';
 import brave from '../images/brave.png';
 import daybreaker from '../images/daybreaker.png';
-import dior from '../images/dior.png';
+import fresh from '../images/fresh.png';
 import hellofresh from '../images/hellofresh.png';
 import morningbrew from '../images/morningbrew.png';
 import revel from '../images/revel.png';
@@ -31,7 +31,7 @@ const Welcome: React.FC = () => {
             <Logo height={35} src={matchabar} />
           </A>
           <A marginRight={15}>
-            <Logo height={25} src={dior} />
+            <Logo height={25} src={fresh} />
           </A>
           <A marginRight={20}>
             <Logo height={40} src={revel} />
